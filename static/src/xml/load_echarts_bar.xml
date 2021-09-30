@@ -2,14 +2,30 @@
 <templates id='template' xml:space='preserve'>
     <t t-name="echarts_bar_template">
         <div id="main" style="width:100%; height:100%;">
-            <div id="bar" style="width:1000px; height:600px;"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="bar1" style="width:100%; height:450px;"></div>
+                </div>
+                    <div class="col-md-6">
+                    <div id="bar2" style="width:100%; height:450px;"></div>
+                </div>
+                    <div class="col-md-6">
+                    <div id="bar3" style="width:100%; height:450px;"></div>
+                </div>
+                    <div class="col-md-6">
+                    <div id="bar4" style="width:100%; height:450px;"></div>
+                </div>
+            </div>
         </div>
 
         <script>
-            var chart = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+            var chart1 = echarts.init(document.getElementById('bar1'), 'white', {renderer: 'canvas'});
+            var chart2 = echarts.init(document.getElementById('bar2'), 'white', {renderer: 'canvas'});
+            var chart3 = echarts.init(document.getElementById('bar3'), 'white', {renderer: 'canvas'});
+            var chart4 = echarts.init(document.getElementById('bar4'), 'white', {renderer: 'canvas'});
 
             $(function () {
-                fetchData(chart);
+                fetchData();
             });
 
             function fetchData() {
@@ -20,7 +36,10 @@
                     success: function (result) {
                         console.log('success');
                         console.log(result);
-                        chart.setOption(result);
+                        chart1.setOption(result.bar1);
+                        chart2.setOption(result.bar2);
+                        chart3.setOption(result.bar3);
+                        chart4.setOption(result.bar4);
                     },
                     error: function(request) {
                         console.log("error")
