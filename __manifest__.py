@@ -6,8 +6,10 @@
     'author': 'huaqiangyan@163.com',
     'depends': ['web'],
     'data': [
+        'security/ir.model.access.csv',
         'views/assets_backend.xml',
         'views/home.xml',
+        'views/echarts_type_view.xml'
     ],
     'qweb': [
         'static/src/xml/*.xml',
