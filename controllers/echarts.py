@@ -41,6 +41,11 @@ def bar3_base():
             .add("", [list(z) for z in zip(Faker.choose(), Faker.values())])
             .set_global_opts(title_opts=opts.TitleOpts(title="Pie-基本示例"))
             .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
+            .set_global_opts(
+                title_opts=opts.TitleOpts(title="Bar-显示 ToolBox"),
+                toolbox_opts=opts.ToolboxOpts(),
+                legend_opts=opts.LegendOpts(is_show=True),
+            )
             .dump_options_with_quotes()
     )
     return c
@@ -73,12 +78,13 @@ def bar4_base():
         )
             .add_xaxis(xaxis_data=x_data)
             .add_yaxis(
-            series_name="",
-            y_axis=y_data,
-            symbol="emptyCircle",
-            is_symbol_show=True,
-            label_opts=opts.LabelOpts(is_show=False),
-        )
+                series_name="",
+                y_axis=y_data,
+                symbol="emptyCircle",
+                is_symbol_show=True,
+                label_opts=opts.LabelOpts(is_show=True),
+                markline_opts=opts.MarkLineOpts(data=[opts.MarkLineItem(type_="average")]),
+            )
             .dump_options_with_quotes()
     )
     return c
