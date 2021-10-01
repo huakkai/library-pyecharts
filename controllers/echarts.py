@@ -6,6 +6,8 @@ from pyecharts.charts import Bar
 from pyecharts import options as opts
 from pyecharts.charts import Line
 from pyecharts.charts import Pie
+from pyecharts.charts import Gauge
+from pyecharts.charts import HeatMap
 from pyecharts.faker import Faker
 
 import logging
@@ -38,7 +40,7 @@ class PyEcharts(http.Controller):
             dashboard_dict['details'].append({
                 'sequence': str(line.sequence),
                 'etype': line.echart.etype,
-                'edata': json.loads(bar1_base()),
+                'edata': _get_chart(label=line.echart.etype),
             })
         return json.dumps(dashboard_dict)
         # return json.dumps({
@@ -49,7 +51,22 @@ class PyEcharts(http.Controller):
         # })
 
 
-def bar1_base():
+def _get_chart(label=None):
+    if label == 'Bar':
+        return json.loads(bar_base())
+    elif label == 'Pie':
+        return json.loads(pie_base())
+    elif label == 'Line':
+        return json.loads(line_base())
+    elif label == 'Gauge':
+        return json.loads(gauge_base())
+    elif label == 'Heatmap':
+        return json.loads(heatmap_base())
+    else:
+        return {}
+
+
+def bar_base():
     c = (
         Bar()
             .add_xaxis(["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"])
@@ -61,7 +78,7 @@ def bar1_base():
     return c
 
 
-def bar3_base():
+def pie_base():
     c = (
         Pie()
             .add("", [list(z) for z in zip(Faker.choose(), Faker.values())])
@@ -77,17 +94,7 @@ def bar3_base():
     return c
 
 
-def bar2_base():
-    c = (
-        Bar()
-            .add_xaxis(["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"])
-            .add_yaxis("商家A", [5, 20, 36, 10, 75, 90])
-            .dump_options_with_quotes()
-    )
-    return c
-
-
-def bar4_base():
+def line_base():
     x_data = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     y_data = [820, 932, 901, 934, 1290, 1330, 1320]
 
@@ -112,5 +119,39 @@ def bar4_base():
                 markline_opts=opts.MarkLineOpts(data=[opts.MarkLineItem(type_="average")]),
             )
             .dump_options_with_quotes()
+    )
+    return c
+
+
+def gauge_base():
+    c = (
+        Gauge()
+            .add(
+            "业务指标",
+            [("完成率", 55.5)],
+            axisline_opts=opts.AxisLineOpts(
+                linestyle_opts=opts.LineStyleOpts(
+                    color=[(0.3, "#67e0e3"), (0.7, "#37a2da"), (1, "#fd666d")], width=30
+                )
+            ),
+        )
+            .set_global_opts(
+            title_opts=opts.TitleOpts(title="Gauge-不同颜色"),
+            legend_opts=opts.LegendOpts(is_show=False),
+        ).dump_options_with_quotes()
+    )
+    return c
+
+
+def heatmap_base():
+    value = [[i, j, random.randint(0, 50)] for i in range(24) for j in range(7)]
+    c = (
+        HeatMap()
+            .add_xaxis(Faker.clock)
+            .add_yaxis("series0", Faker.week, value)
+            .set_global_opts(
+            title_opts=opts.TitleOpts(title="HeatMap-基本示例"),
+            visualmap_opts=opts.VisualMapOpts(),
+        ).dump_options_with_quotes()
     )
     return c

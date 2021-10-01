@@ -10,6 +10,41 @@ library_pyecharts具有体积小、易扩展、易使用等特点，方便开发
 
 ![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example4.jpg)
 
+#### 界面展示支持配置
+
+适配栅格系统：column为界面纵向展示图表数
+
+![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example5.jpg)
+
+![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example6.jpg)
+
+![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example7.jpg)
+
+#### 扩展开发
+
+##### API
+
+```
+def heatmap_base():
+    value = [[i, j, random.randint(0, 50)] for i in range(24) for j in range(7)]
+    c = (
+        HeatMap()
+            .add_xaxis(Faker.clock)
+            .add_yaxis("series0", Faker.week, value)
+            .set_global_opts(
+            title_opts=opts.TitleOpts(title="HeatMap-基本示例"),
+            visualmap_opts=opts.VisualMapOpts(),
+        ).dump_options_with_quotes()
+    )
+    return c
+```
+
+##### 基于元数据的自定义配置
+
+```
+TODO
+```
+
 #### 软件架构
 
 BI
@@ -35,3 +70,9 @@ pyecharts
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
+
+#### 关于
+
+1、本模块完全开源，无任何使用限制，但请在使用代码时保留版权信息
+
+2、为了有持续功能迭代的动力，如果您对此模块感兴趣，请通过star或者fork或者留言或者等等其他方式让我知道你在关注
