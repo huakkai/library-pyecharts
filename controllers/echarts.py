@@ -1,6 +1,7 @@
 from odoo import http
 import json
 import random
+from odoo.http import request
 from pyecharts.charts import Bar
 from pyecharts import options as opts
 from pyecharts.charts import Line
@@ -15,12 +16,37 @@ _logger = logging.getLogger(__name__)
 class PyEcharts(http.Controller):
     @http.route('/pyecharts', auth='public', type='http', cors='*', methods=['POST', 'GET'], csrf=False)
     def pyecharts(self):
-        return json.dumps({
-            'bar1': json.loads(bar1_base()),
-            'bar2': json.loads(bar2_base()),
-            'bar3': json.loads(bar3_base()),
-            'bar4': json.loads(bar4_base()),
-        })
+        """
+        {
+            'column': 2 / 1,
+            'detail': {
+                sequence: {
+                    'etype': etype,
+                    'edata': edata,
+                }
+            }
+        }
+        :return:
+        """
+        dashboard_dict = {}
+        # 1、get default dashboard
+        dashboard_obj = request.env['echarts.dashboard'].p_get_default_dashboard()
+        dashboard_dict['column'] = dashboard_obj.column
+        dashboard_dict['count'] = len(dashboard_obj.line_ids)
+        dashboard_dict['details'] = []
+        for line in dashboard_obj.line_ids:
+            dashboard_dict['details'].append({
+                'sequence': str(line.sequence),
+                'etype': line.echart.etype,
+                'edata': json.loads(bar1_base()),
+            })
+        return json.dumps(dashboard_dict)
+        # return json.dumps({
+        #     'bar1': json.loads(bar1_base()),
+        #     'bar2': json.loads(bar2_base()),
+        #     'bar3': json.loads(bar3_base()),
+        #     'bar4': json.loads(bar4_base()),
+        # })
 
 
 def bar1_base():

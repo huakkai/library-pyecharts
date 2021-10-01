@@ -12,6 +12,15 @@ class Dashboard(models.Model):
 
     line_ids = fields.One2many('echarts.dashboard.line', 'parent_id', string='Dashboard Detail')
 
+    def p_get_default_dashboard(self):
+        """
+
+        :return:
+        """
+        dashboard = self.search([('is_active', '=', True)], limit=1)
+        if dashboard:
+            return dashboard
+
 
 class DashboardLine(models.Model):
     _name = 'echarts.dashboard.line'
