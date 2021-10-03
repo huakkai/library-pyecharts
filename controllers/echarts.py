@@ -15,6 +15,15 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
+class Demo(http.Controller):
+    @http.route('/demo', auth='public', type='http', cors='*', methods=['POST', 'GET'], csrf=False)
+    def demo(self):
+        return json.dumps({
+            'bar1': json.loads(line_base()),
+            'bar2': json.loads(gauge_base()),
+        })
+
+
 class PyEcharts(http.Controller):
     @http.route('/pyecharts', auth='public', type='http', cors='*', methods=['POST', 'GET'], csrf=False)
     def pyecharts(self):
