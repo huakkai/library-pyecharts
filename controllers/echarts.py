@@ -72,7 +72,7 @@ def bar_base():
             .add_xaxis(["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"])
             .add_yaxis("商家A", [random.randint(0, 100) for _ in range(6)])
             .add_yaxis("商家B", [random.randint(0, 100) for _ in range(6)])
-            .set_global_opts(title_opts=opts.TitleOpts(title="Bar-基本示例", subtitle="我是副标题"))
+            # .set_global_opts(title_opts=opts.TitleOpts(title="Bar-基本示例", subtitle="我是副标题"))
             .dump_options_with_quotes()
     )
     return c
@@ -85,7 +85,7 @@ def pie_base():
             .set_global_opts(title_opts=opts.TitleOpts(title="Pie-基本示例"))
             .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
             .set_global_opts(
-                title_opts=opts.TitleOpts(title="Bar-显示 ToolBox"),
+                # title_opts=opts.TitleOpts(title="Bar-显示 ToolBox"),
                 toolbox_opts=opts.ToolboxOpts(),
                 legend_opts=opts.LegendOpts(is_show=True),
             )
@@ -136,7 +136,7 @@ def gauge_base():
             ),
         )
             .set_global_opts(
-            title_opts=opts.TitleOpts(title="Gauge-不同颜色"),
+            # title_opts=opts.TitleOpts(title="Gauge-不同颜色"),
             legend_opts=opts.LegendOpts(is_show=False),
         ).dump_options_with_quotes()
     )
@@ -150,7 +150,7 @@ def heatmap_base():
             .add_xaxis(Faker.clock)
             .add_yaxis("series0", Faker.week, value)
             .set_global_opts(
-            title_opts=opts.TitleOpts(title="HeatMap-基本示例"),
+            # title_opts=opts.TitleOpts(title="HeatMap-基本示例"),
             visualmap_opts=opts.VisualMapOpts(),
         ).dump_options_with_quotes()
     )
