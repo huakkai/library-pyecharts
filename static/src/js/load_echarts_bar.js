@@ -13,6 +13,72 @@ odoo.define('load_echarts_bar', function (require) {
         },
 
         start: function(){
+            $(document).ready(function() {
+                // demo begin
+
+                var chart1 = echarts.init(document.getElementById('bar1'), 'white', {renderer: 'canvas'});
+                var chart2 = echarts.init(document.getElementById('bar2'), 'white', {renderer: 'canvas'});
+
+                $(function () {
+                    fetchData1();
+                });
+
+                function fetchData1() {
+                    $.ajax({
+                        type: "GET",
+                        url: "/demo",
+                        dataType: 'json',
+                        success: function (result) {
+                            chart1.setOption(result.bar1);
+                            chart2.setOption(result.bar2);
+                        },
+                        error: function(request) {
+                            console.log("error")
+                        },
+                    });
+                }
+
+                // demo end
+
+
+                $(function () {
+                    fetchData();
+                });
+                function fetchData() {
+                    $.ajax({
+                        type: "GET",
+                        url: "/pyecharts",
+                        dataType: 'json',
+                        success: function (result) {
+                            console.log('success');
+                            console.log(result);
+                            var count = result.count;
+                            var column = result.column;
+                            var col = "col-md-" + String(12 / column);
+                            var details = result.details;
+                            var ech = document.getElementById("ech");
+                            for (var detail in details) {
+                                console.log(details[detail]);
+                                var detailDiv = document.createElement("div");
+                                detailDiv.setAttribute("class", col);
+                                var d = document.createElement("div");
+                                d.setAttribute("id", details[detail]['sequence']);
+                                d.style.width = "100%";
+                                d.style.height = "400px";
+                                detailDiv.appendChild(d);
+
+                                ech.appendChild(detailDiv);
+
+                                var chart = echarts.init(document.getElementById(details[detail]['sequence']), 'white', {renderer: 'canvas'});
+                                chart.setOption(details[detail]['edata']);
+                            }
+                        },
+                        error: function(request) {
+                            console.log("error")
+                        },
+                    });
+                }
+            });
             return true;
         },
 
