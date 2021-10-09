@@ -7,6 +7,8 @@
     'depends': ['web'],
     'data': [
         'security/ir.model.access.csv',
+        'data/echarts_type_data.xml',
+        'data/dashboard_data.xml',
         # 'views/assets_backend.xml',
         'views/home.xml',
         'views/echarts_type_view.xml',
