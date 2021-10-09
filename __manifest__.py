@@ -7,12 +7,20 @@
     'depends': ['web'],
     'data': [
         'security/ir.model.access.csv',
-        'views/assets_backend.xml',
+        # 'views/assets_backend.xml',
         'views/home.xml',
         'views/echarts_type_view.xml',
         'views/dashboard.xml',
     ],
-    'qweb': [
-        'static/src/xml/*.xml',
-    ],
+    'assets': {
+        'web.assets_backend': [
+            'library_pyecharts/static/src/js/china.js',
+            'library_pyecharts/static/src/js/echarts.min.js',
+            'library_pyecharts/static/src/js/load_echarts_bar.js',
+            'library_pyecharts/static/src/css/sb-admin-2.min.css',
+        ],
+        'web.assets_qweb': [
+            'library_pyecharts/static/src/xml/**/*',
+        ],
+    },
 }
