@@ -6,7 +6,7 @@
                 <script type="text/javascript" src="/library_pyecharts/static/src/js/echarts.min.js"></script>
                 <script type="text/javascript" src="/library_pyecharts/static/src/js/china.js"></script>
                 <script type="text/javascript" src="/library_pyecharts/static/src/js/load_echarts_bar.js"></script>
-                <link rel="stylesheet" type="text/scss" href="/library_pyecharts/static/src/css/sb-admin-2.min.css"/>
+                <link rel="stylesheet" type="text/scss" href="/library_pyecharts/static/src/css/adminlte.min.css"/>
             </xpath>
         </template>
     </data>

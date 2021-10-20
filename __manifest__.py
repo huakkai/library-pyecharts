@@ -19,7 +19,7 @@
             'library_pyecharts/static/src/js/echarts.min.js',
             'library_pyecharts/static/src/js/china.js',
             'library_pyecharts/static/src/js/load_echarts_bar.js',
-            'library_pyecharts/static/src/css/sb-admin-2.min.css',
+            'library_pyecharts/static/src/css/adminlte.min.css',
         ],
         'web.assets_qweb': [
             'library_pyecharts/static/src/xml/**/*',
