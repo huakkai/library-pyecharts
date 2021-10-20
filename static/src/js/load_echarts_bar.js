@@ -16,27 +16,27 @@ odoo.define('load_echarts_bar', function (require) {
             $(document).ready(function() {
                 // demo begin
 
-                var chart1 = echarts.init(document.getElementById('bar1'), 'white', {renderer: 'canvas'});
-                var chart2 = echarts.init(document.getElementById('bar2'), 'white', {renderer: 'canvas'});
-
-                $(function () {
-                    fetchData1();
-                });
-
-                function fetchData1() {
-                    $.ajax({
-                        type: "GET",
-                        url: "/demo",
-                        dataType: 'json',
-                        success: function (result) {
-                            chart1.setOption(result.bar1);
-                            chart2.setOption(result.bar2);
-                        },
-                        error: function(request) {
-                            console.log("error")
-                        },
-                    });
-                }
+                // var chart1 = echarts.init(document.getElementById('bar1'), 'white', {renderer: 'canvas'});
+                // var chart2 = echarts.init(document.getElementById('bar2'), 'white', {renderer: 'canvas'});
+                //
+                // $(function () {
+                //     fetchData1();
+                // });
+                //
+                // function fetchData1() {
+                //     $.ajax({
+                //         type: "GET",
+                //         url: "/demo",
+                //         dataType: 'json',
+                //         success: function (result) {
+                //             chart1.setOption(result.bar1);
+                //             chart2.setOption(result.bar2);
+                //         },
+                //         error: function(request) {
+                //             console.log("error")
+                //         },
+                //     });
+                // }
 
                 // demo end
 
