@@ -78,3 +78,7 @@ pyecharts
 2、为了有持续功能迭代的动力，如果您对此模块感兴趣，请通过star或者fork或者留言或者等等其他方式让我知道你在关注。切忌无脑download，没有意义
 
 3、如果您有好的想法或者建议，请提交代码或者评论意见。Talk is cheap, show me the code.
+
+#### 讨论&帮助
+
+![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/qq.png)
