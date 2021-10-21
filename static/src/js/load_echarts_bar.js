@@ -54,6 +54,7 @@ odoo.define('load_echarts_bar', function (require) {
                             console.log(result);
                             var count = result.count;
                             var column = result.column;
+                            var theme = result.theme;
                             var col = "col-md-" + String(12 / column);
                             var details = result.details;
                             var ech = document.getElementById("ech");
@@ -72,7 +73,7 @@ odoo.define('load_echarts_bar', function (require) {
 
                                 ech.appendChild(detailDiv);
 
-                                var chart = echarts.init(document.getElementById(details[detail]['sequence']), 'shine', {renderer: 'canvas'});
+                                var chart = echarts.init(document.getElementById(details[detail]['sequence']), theme, {renderer: 'canvas'});
                                 chart.setOption(details[detail]['edata']);
                             }
                         },

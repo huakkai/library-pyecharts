@@ -1,6 +1,15 @@
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
 
+THEME_SELECTION = [
+    ('shine', 'Shine'),
+    ('dark', 'Dark'),
+    ('roma', 'Roma'),
+    ('vintage', 'Vintage'),
+    ('macarons', 'Macarons'),
+    ('infographic', 'Infographic'),
+]
+
 
 class Dashboard(models.Model):
     _name = 'echarts.dashboard'
@@ -9,6 +18,7 @@ class Dashboard(models.Model):
     name = fields.Char(string='Name')
     is_active = fields.Boolean(string='Active')
     column = fields.Integer(string='Column')
+    theme = fields.Selection(THEME_SELECTION, default='shine', string='Theme')
 
     line_ids = fields.One2many('echarts.dashboard.line', 'parent_id', string='Dashboard Detail')
 

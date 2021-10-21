@@ -39,12 +39,14 @@ class PyEcharts(http.Controller):
         }
         :return:
         """
-        dashboard_dict = {}
         # 1、get default dashboard
         dashboard_obj = request.env['echarts.dashboard'].p_get_default_dashboard()
-        dashboard_dict['column'] = dashboard_obj.column
-        dashboard_dict['count'] = len(dashboard_obj.line_ids)
-        dashboard_dict['details'] = []
+        dashboard_dict = {
+            'column': dashboard_obj.column,
+            'count': len(dashboard_obj.line_ids),
+            'theme': dashboard_obj.theme,
+            'details': [],
+        }
         for line in dashboard_obj.line_ids:
             dashboard_dict['details'].append({
                 'sequence': str(line.sequence),
