@@ -20,6 +20,12 @@
             'library_pyecharts/static/src/js/china.js',
             'library_pyecharts/static/src/js/load_echarts_bar.js',
             'library_pyecharts/static/src/css/adminlte.min.css',
+            'library_pyecharts/static/src/js/theme_dark.js',
+            'library_pyecharts/static/src/js/theme_macarons.js',
+            'library_pyecharts/static/src/js/theme_vintage.js',
+            'library_pyecharts/static/src/js/theme_infographic.js',
+            'library_pyecharts/static/src/js/theme_roma.js',
+            'library_pyecharts/static/src/js/theme_shine.js',
         ],
         'web.assets_qweb': [
             'library_pyecharts/static/src/xml/**/*',

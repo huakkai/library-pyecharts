@@ -12,6 +12,8 @@ library_pyecharts具有体积小、易扩展、易使用等特点，方便开发
 
 ![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example9.jpg)
 
+![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/theme.jpg)
+
 #### 界面展示支持配置
 
 适配栅格系统：column为界面纵向展示图表数
