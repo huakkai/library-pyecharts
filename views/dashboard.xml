@@ -23,6 +23,7 @@
                         <group>
                             <field name="name"/>
                             <field name="theme"/>
+                            <field name="height"/>
                         </group>
                         <group>
                             <field name="column"/>

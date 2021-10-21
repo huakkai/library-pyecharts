@@ -45,6 +45,7 @@ class PyEcharts(http.Controller):
             'column': dashboard_obj.column,
             'count': len(dashboard_obj.line_ids),
             'theme': dashboard_obj.theme,
+            'height': dashboard_obj.height,
             'details': [],
         }
         for line in dashboard_obj.line_ids:

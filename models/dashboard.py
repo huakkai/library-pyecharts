@@ -19,6 +19,7 @@ class Dashboard(models.Model):
     is_active = fields.Boolean(string='Active')
     column = fields.Integer(string='Column')
     theme = fields.Selection(THEME_SELECTION, default='shine', string='Theme')
+    height = fields.Integer(default=400, string='Element Height（px）')
 
     line_ids = fields.One2many('echarts.dashboard.line', 'parent_id', string='Dashboard Detail')
 
