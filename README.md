@@ -60,7 +60,11 @@ BI
 
 #### 安装教程
 
-pyecharts
+pip install pyecharts
+
+[pyecharts.org](https://pyecharts.org/#/zh-cn/intro)
+
+[echarts.apache.org](https://echarts.apache.org/handbook/zh/get-started/)
 
 #### 使用说明
 
