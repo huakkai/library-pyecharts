@@ -83,7 +83,10 @@ def bar_base():
             .add_xaxis(["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"])
             .add_yaxis("商家A", [random.randint(0, 100) for _ in range(6)])
             .add_yaxis("商家B", [random.randint(0, 100) for _ in range(6)])
-            # .set_global_opts(title_opts=opts.TitleOpts(title="Bar-基本示例", subtitle="我是副标题"))
+            .set_global_opts(
+                title_opts=opts.TitleOpts(title="Title", subtitle="Subtitle"),
+                toolbox_opts=opts.ToolboxOpts(is_show=True, pos_left='90%', pos_top='top', feature={'saveAsImage': {}, 'dataView': {}}),
+            )
             .dump_options_with_quotes()
     )
     return c
@@ -96,8 +99,8 @@ def pie_base():
             .set_global_opts(title_opts=opts.TitleOpts(title="Pie-基本示例"))
             .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
             .set_global_opts(
-                # title_opts=opts.TitleOpts(title="Bar-显示 ToolBox"),
-                toolbox_opts=opts.ToolboxOpts(),
+                title_opts=opts.TitleOpts(title="Bar-显示 ToolBox"),
+                toolbox_opts=opts.ToolboxOpts(is_show=True),
                 legend_opts=opts.LegendOpts(is_show=True),
             )
             .dump_options_with_quotes()
@@ -112,7 +115,8 @@ def line_base():
     c = (
         Line()
             .set_global_opts(
-            tooltip_opts=opts.TooltipOpts(is_show=False),
+            tooltip_opts=opts.TooltipOpts(is_show=True),
+            toolbox_opts=opts.ToolboxOpts(is_show=True, pos_left='90%', pos_top='top'),
             xaxis_opts=opts.AxisOpts(type_="category"),
             yaxis_opts=opts.AxisOpts(
                 type_="value",
