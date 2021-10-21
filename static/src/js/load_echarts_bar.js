@@ -65,6 +65,9 @@ odoo.define('load_echarts_bar', function (require) {
                                 d.setAttribute("id", details[detail]['sequence']);
                                 d.style.width = "100%";
                                 d.style.height = "400px";
+                                // d.style.border = "1px solid #B0E2FF";
+                                d.style.marginBottom = "10px";
+                                d.style.boxShadow = "0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%)";
                                 detailDiv.appendChild(d);
 
                                 ech.appendChild(detailDiv);
