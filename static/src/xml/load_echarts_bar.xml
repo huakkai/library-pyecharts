@@ -5,45 +5,59 @@
             <div class="container-fluid">
                 <div id="ech" class="row" style="padding-top:10px">
 
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <div class="info-box">
-                          <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
-                            <div class="info-box-content">
-                            <span class="info-box-text">CPU Traffic</span>
-                                <span class="info-box-number">
-                              10
-                              <small>%</small>
-                            </span>
-                          </div>
+                   <div class="col-lg-3 col-xs-6">
+                      <!-- small box -->
+                       <div class="small-box bg-aqua">
+                        <div class="inner">
+                          <h3>150</h3><p>New Orders</p>
                         </div>
+                           <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                           <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      </div>
+                   </div>
+                   <!-- ./col -->
+                   <div class="col-lg-3 col-xs-6">
+                      <!-- small box -->
+                       <div class="small-box bg-green">
+                        <div class="inner">
+                          <h3>53<sup style="font-size: 20px">%</sup></h3>
+                          <p>Bounce Rate</p>
+                        </div>
+                        <div class="icon">
+                          <i class="ion ion-stats-bars"></i>
+                        </div>
+                           <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      </div>
+                   </div>
+                   <!-- ./col -->
+                   <div class="col-lg-3 col-xs-6">
+                      <!-- small box -->
+                       <div class="small-box bg-yellow">
+                            <div class="inner">
+                                <h3>44</h3>
+                                <p>User Registrations</p>
+                            </div>
+                            <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <div class="info-box mb-3">
-                          <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
-                            <div class="info-box-content">
-                            <span class="info-box-text">Likes</span>
-                                <span class="info-box-number">41,410</span>
-                          </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-xs-6">
+                      <!-- small box -->
+                        <div class="small-box bg-red">
+                        <div class="inner">
+                            <h3>65</h3>
+                            <p>Unique Visitors</p>
                         </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <div class="info-box mb-3">
-                          <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
-                            <div class="info-box-content">
-                            <span class="info-box-text">Sales</span>
-                                <span class="info-box-number">760</span>
-                          </div>
+                        <div class="icon">
+                          <i class="ion ion-pie-graph"></i>
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <div class="info-box mb-3">
-                          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
-                            <div class="info-box-content">
-                            <span class="info-box-text">New Members</span>
-                                <span class="info-box-number">2,000</span>
-                          </div>
-                        </div>
+                           <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      </div>
                     </div>
 
                     <!--<div class="col-md-9">-->
