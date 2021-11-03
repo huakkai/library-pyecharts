@@ -18,7 +18,7 @@
         'web.assets_backend': [
             'library_pyecharts/static/src/js/echarts.min.js',
             'library_pyecharts/static/src/js/china.js',
-            'library_pyecharts/static/src/js/load_echarts_bar.js',
+            'library_pyecharts/static/src/js/load_pyecharts.js',
             'library_pyecharts/static/src/css/adminlte.min.css',
             'library_pyecharts/static/src/js/theme_dark.js',
             'library_pyecharts/static/src/js/theme_macarons.js',

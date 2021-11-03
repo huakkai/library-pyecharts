@@ -1,12 +1,12 @@
-odoo.define('load_echarts_bar', function (require) {
+odoo.define('load_pyecharts', function (require) {
     "use strict";
     var core = require('web.core');
     var Widget = require('web.Widget');
     var AbstractAction = require('web.AbstractAction');
 
 
-    var Bar = AbstractAction.extend({
-        template: 'echarts_bar_template',
+    var PyEcharts = AbstractAction.extend({
+        template: 'pyecharts_template',
 
         init: function(parent, data){
             return this._super.apply(this, arguments);
@@ -89,5 +89,5 @@ odoo.define('load_echarts_bar', function (require) {
 
 
     });
-    core.action_registry.add('load_echarts_bar', Bar);
+    core.action_registry.add('load_pyecharts', PyEcharts);
 });
