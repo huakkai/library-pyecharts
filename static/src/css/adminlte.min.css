@@ -8339,6 +8339,10 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
     margin: 0!important
 }
 
+.is-notice {
+    color: red;
+}
+
 .mt-0,.my-0 {
     margin-top: 0!important
 }

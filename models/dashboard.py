@@ -20,6 +20,7 @@ class Dashboard(models.Model):
     column = fields.Integer(string='Column')
     theme = fields.Selection(THEME_SELECTION, default='shine', string='Theme')
     height = fields.Integer(default=400, string='Element Height（px）')
+    is_notice = fields.Boolean(default=True, string='Is Notice')  # 显示公告栏
 
     line_ids = fields.One2many('echarts.dashboard.line', 'parent_id', string='Dashboard Detail')
 

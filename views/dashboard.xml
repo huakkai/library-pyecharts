@@ -9,6 +9,7 @@
                 <field name="column"/>
                 <field name="theme"/>
                 <field name="is_active"/>
+                <field name="is_notice"/>
             </tree>
         </field>
     </record>
@@ -28,6 +29,7 @@
                         <group>
                             <field name="column"/>
                             <field name="is_active"/>
+                            <field name="is_notice"/>
                         </group>
                     </group>
                     <notebook>

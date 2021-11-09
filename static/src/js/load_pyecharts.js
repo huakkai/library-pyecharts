@@ -56,8 +56,18 @@ odoo.define('load_pyecharts', function (require) {
                             var column = result.column;
                             var theme = result.theme;
                             var height = result.height;
+                            var notice = result.notice;
                             var col = "col-md-" + String(12 / column);
                             var details = result.details;
+
+                            // notice
+                            var divNotice = document.getElementById("divNotice");
+                            if (notice) {
+                                divNotice.style.display = 'block';
+                            } else {
+                                divNotice.style.display = 'none';
+                            };
+
                             var ech = document.getElementById("ech");
                             for (var detail in details) {
                                 console.log(details[detail]);
