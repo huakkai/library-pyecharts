@@ -43,8 +43,8 @@ odoo.define('load_pyecharts', function (require) {
 
                 $(function () {
                     fetchData();
-
-                    setInterval(function(){ fetchData(); }, 3000);
+                    // 作为展示屏幕时设置为定时刷新
+                    // setInterval(function(){ fetchData(); }, 3000);
                 });
 
                 function fetchData() {
