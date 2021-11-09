@@ -43,7 +43,10 @@ odoo.define('load_pyecharts', function (require) {
 
                 $(function () {
                     fetchData();
+
+                    setInterval(function(){ fetchData(); }, 3000);
                 });
+
                 function fetchData() {
                     $.ajax({
                         type: "GET",
@@ -97,7 +100,7 @@ odoo.define('load_pyecharts', function (require) {
                             console.log("error")
                         },
                     });
-                }
+                };
             });
             return true;
         },
