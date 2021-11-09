@@ -10,9 +10,9 @@
                             <h5 class="card-title is-notice">公告栏</h5>
                           </div>
                           <div class="card-body">
-                            <h6 class="card-title">公告title - 可设置对应属性</h6>
+                            <h6 id="notice-title" class="card-title">公告title - 可设置对应属性</h6>
                             <br/>
-                            <p class="card-text">
+                            <p id="notice-content" class="card-text">
                                 接集团人力资源部通知，根据中共济南市委办公厅、济南市人民政府办公厅《关于积极做好冰雪天气应对工作的紧急通知》，临时调整驻济机关、企事业单位上下班时间，针对济南市员工，具体通知如下：
                                 1、11月8日，上午推迟至10时上班，下午提前至16时下班；
                                 2、孕、病期员工根据情况可居家办公；

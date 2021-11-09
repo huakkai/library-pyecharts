@@ -12,6 +12,7 @@
         # 'views/assets_backend.xml',
         'views/home.xml',
         'views/echarts_type_view.xml',
+        'views/echarts_notice_view.xml',
         'views/dashboard.xml',
     ],
     'assets': {

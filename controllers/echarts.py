@@ -46,7 +46,8 @@ class PyEcharts(http.Controller):
             'count': len(dashboard_obj.line_ids),
             'theme': dashboard_obj.theme,
             'height': dashboard_obj.height,
-            'notice': dashboard_obj.is_notice,
+            'is_notice': dashboard_obj.is_notice,
+            'notice': [],
             'details': [],
         }
         for line in dashboard_obj.line_ids:
@@ -55,6 +56,16 @@ class PyEcharts(http.Controller):
                 'etype': line.echart.etype,
                 'edata': _get_chart(label=line.echart.etype),
             })
+        # Notice
+        notices = request.env['echarts.notice'].search([('is_valid', '=', True)], limit=1)
+        if dashboard_obj.is_notice and notices:
+            for notice in notices:
+                # TODO：显示多条排序处理
+                dashboard_dict['notice'].append({
+                    'title': notice.title,
+                    'content': notice.content,
+                    'ntype': notice.ntype,
+                })
         return json.dumps(dashboard_dict)
         # return json.dumps({
         #     'bar1': json.loads(bar1_base()),

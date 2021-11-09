@@ -61,9 +61,14 @@ odoo.define('load_pyecharts', function (require) {
                             var details = result.details;
 
                             // notice
+                            // 以后可能支持多条显示
                             var divNotice = document.getElementById("divNotice");
-                            if (notice) {
+                            if (notice && result.is_notice) {
                                 divNotice.style.display = 'block';
+                                for (var index in notice) {
+                                    document.getElementById("notice-title").innerText = notice[index].title;
+                                    document.getElementById("notice-content").innerText = notice[index].content;
+                                };
                             } else {
                                 divNotice.style.display = 'none';
                             };

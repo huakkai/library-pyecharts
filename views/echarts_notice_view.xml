@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_echarts_notice_tree" model="ir.ui.view">
+        <field name="name">Echarts Notice</field>
+        <field name="model">echarts.notice</field>
+        <field name="arch" type="xml">
+            <tree string="Echarts Notice">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_echarts_notice_form" model="ir.ui.view">
+        <field name="name">Echarts Notice</field>
+        <field name="model">echarts.notice</field>
+        <field name="arch" type="xml">
+            <form string="Echarts Notice">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="title"/>
+                            <field name="content"/>
+                        </group>
+                        <group>
+                            <field name="ntype"/>
+                            <field name="is_valid"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_echarts_notice" model="ir.actions.act_window">
+        <field name="name">Echarts Notice</field>
+        <field name="res_model">echarts.notice</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Echarts Notice
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_echarts_notice"
+            name="Echarts Notice"
+            parent="menu_echarts_config"
+            action="action_echarts_notice"
+            groups="base.group_user"/>
+</odoo>
+
