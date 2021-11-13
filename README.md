@@ -6,9 +6,9 @@ library_pyecharts具有体积小、易扩展、易使用等特点，方便开发
 
 ![Image text](https://gitee.com/esplets/library-pyecharts/raw/13.0/static/img/example14.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/21111200.jpg)
+![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.x.1/static/img/21111200.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/21111201.jpg)
+![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.x.1/static/img/21111201.jpg)
 
 ![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/example11.png)
 
