@@ -26,7 +26,7 @@ class Demo(http.Controller):
 
 class PyEcharts(http.Controller):
     @http.route('/pyecharts', auth='public', type='http', cors='*', methods=['POST', 'GET'], csrf=False)
-    def pyecharts(self):
+    def pyecharts(self, model=None, etype=None):
         """
         {
             'column': 2 / 1,
@@ -66,13 +66,8 @@ class PyEcharts(http.Controller):
                     'content': notice.content,
                     'ntype': notice.ntype,
                 })
+        dashboard_dict['echarts_data'] = _get_chart(label=etype)
         return json.dumps(dashboard_dict)
-        # return json.dumps({
-        #     'bar1': json.loads(bar1_base()),
-        #     'bar2': json.loads(bar2_base()),
-        #     'bar3': json.loads(bar3_base()),
-        #     'bar4': json.loads(bar4_base()),
-        # })
 
 
 def _get_chart(label=None):

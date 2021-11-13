@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Library pyecharts',
-    'version': '12.0.0.1',
+    'version': '15.0.0.1',
     'description': '',
     'author': 'huaqiangyan@163.com',
     'depends': ['web'],
@@ -27,6 +27,13 @@
             'library_pyecharts/static/src/js/theme_infographic.js',
             'library_pyecharts/static/src/js/theme_roma.js',
             'library_pyecharts/static/src/js/theme_shine.js',
+            'library_pyecharts/static/src/js/bar_render.js',
+            'library_pyecharts/static/src/js/view_bar.js',
+            'library_pyecharts/static/src/js/pie_render.js',
+            'library_pyecharts/static/src/js/view_pie.js',
+
+            # 'library_pyecharts/static/src/js/**/*',
+            # 'library_pyecharts/static/src/css/**/*',
         ],
         'web.assets_qweb': [
             'library_pyecharts/static/src/xml/**/*',

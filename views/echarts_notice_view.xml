@@ -32,10 +32,30 @@
         </field>
     </record>
 
+    <record id="notice_bar_view" model="ir.ui.view">
+        <field name="name">Notice Bar</field>
+        <field name="model">echarts.notice</field>
+        <field name="arch" type="xml">
+            <bar etype="bar">
+                <field name="name"/>
+            </bar>
+        </field>
+    </record>
+
+    <record id="notice_pie_view" model="ir.ui.view">
+        <field name="name">Notice Pie</field>
+        <field name="model">echarts.notice</field>
+        <field name="arch" type="xml">
+            <pie etype="pie">
+                <field name="name"/>
+            </pie>
+        </field>
+    </record>
+
     <record id="action_echarts_notice" model="ir.actions.act_window">
         <field name="name">Echarts Notice</field>
         <field name="res_model">echarts.notice</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,bar,pie</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create Echarts Notice
