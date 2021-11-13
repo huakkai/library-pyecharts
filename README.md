@@ -1,8 +1,35 @@
 # library-pyecharts
 
+#### library_pyecharts是什么？有什么特点？
+
+可以认为是echarts图表库、dashboard工具、扩展视图类型。在pyecharts的基础上，library_pyecharts具有体积小、易扩展、易使用等特点，几乎所有图表都遵循了"同一套路"，没有过多复杂参数、无需细节技巧牵绊，使研发人员专注业务数据的组织整理即可。
+
 #### 介绍
 
-library_pyecharts具有体积小、易扩展、易使用等特点，方便开发人员专注业务层面的逻辑开发，轻松实现多角度的数据展现与分析
+集成多种视图类型（原则上echarts支持的所有图表类型都可按照样例扩展使用），其他业务模块直接使用：
+
+```
+<record id="notice_pie_view" model="ir.ui.view">
+    <field name="name">Notice Pie</field>
+    <field name="model">echarts.notice</field>
+    <field name="arch" type="xml">
+        <pie etype="pie">
+            <field name="name"/>
+        </pie>
+    </field>
+</record>
+
+<record id="action_echarts_notice" model="ir.actions.act_window">
+    <field name="name">Echarts Notice</field>
+    <field name="res_model">echarts.notice</field>
+    <field name="view_mode">tree,form,bar,pie</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create Echarts Notice
+        </p>
+    </field>
+</record>
+```
 
 ![Image text](https://gitee.com/esplets/library-pyecharts/raw/13.0/static/img/example14.jpg)
 
