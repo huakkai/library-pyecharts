@@ -31,35 +31,35 @@
 </record>
 ```
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/13.0/static/img/example14.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/13.0/static/img/example14.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.x.1/static/img/21111200.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/15.x.1/static/img/21111200.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.x.1/static/img/21111201.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/15.x.1/static/img/21111201.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/example11.png)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/15.0/static/img/example11.png)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/example13.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/15.0/static/img/example13.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/example10.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/15.0/static/img/example10.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example8.png)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/14.0/static/img/example8.png)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example9.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/14.0/static/img/example9.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/example12.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/15.0/static/img/example12.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/15.0/static/img/theme.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/15.0/static/img/theme.jpg)
 
 #### 界面展示支持配置
 
 适配栅格系统：column为界面纵向展示图表数
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example5.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/14.0/static/img/example5.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example6.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/14.0/static/img/example6.jpg)
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/example7.jpg)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/14.0/static/img/example7.jpg)
 
 #### 扩展开发
 
@@ -128,4 +128,4 @@ pip install pyecharts
 
 #### 讨论&帮助
 
-![Image text](https://gitee.com/esplets/library-pyecharts/raw/14.0/static/img/qq.png)
+![Image text](https://github.com/huakkai/library-pyecharts/blob/14.0/static/img/qq.png)
